@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Bootstrap Portfolio</title>
+    <meta name="description" content="Modern Bootstrap 5 Portfolio Website" />
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+      .custom-navbar {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    
+    }
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: #fff;
+    }
+
+    .navbar .nav-link:hover {
+      color: #ffd700;
+    }
+
+      :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+      
+      .hero-section {
+        background: var(--primary-gradient);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+        background-size: cover;
+      }
+      
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 15px;
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+      
+      .icon-circle {
+        width: 80px;
+        height: 80px;
+        background: var(--secondary-gradient);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+      
+      .stats-section {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      }
+      
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      
+      .btn-custom {
+        background: var(--secondary-gradient);
+        border: none;
+        border-radius: 50px;
+        padding: 12px 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(245, 87, 108, 0.3);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="bi bi-lightning-charge-fill text-warning"></i>
+          Keshavsoft
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+      <div class="container position-relative">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="display-3 fw-bold mb-4">
+              Build Amazing 
+              <span class="text-warning">Experiences</span>
+            </h1>
+            <p class="lead mb-4">
+              Discover the power of modern web design with Bootstrap 5. 
+              Create stunning, responsive websites that captivate your audience.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <button class="btn btn-custom text-white">Get Started</button>
+              <button class="btn btn-outline-light btn-lg">Learn More</button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="text-center">
+              <div class="bg-white bg-opacity-10 rounded-circle p-5 d-inline-block">
+                <i class="bi bi-rocket-takeoff" style="font-size: 6rem;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Why Choose Us?</h2>
+          <p class="lead text-muted">Discover what makes our approach unique</p>
+        </div>
+        
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card feature-card h-100 text-center p-4">
+              <div class="card-body">
+                <div class="icon-circle">
+                  <i class="bi bi-speedometer2 text-white fs-2"></i>
+                </div>
+                <h5 class="card-title">Lightning Fast</h5>
+                <p class="card-text text-muted">
+                  Optimized performance ensures your site loads quickly on any device.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card feature-card h-100 text-center p-4">
+              <div class="card-body">
+                <div class="icon-circle">
+                  <i class="bi bi-phone text-white fs-2"></i>
+                </div>
+                <h5 class="card-title">Mobile First</h5>
+                <p class="card-text text-muted">
+                  Responsive designs that look perfect on mobile, tablet, and desktop.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card feature-card h-100 text-center p-4">
+              <div class="card-body">
+                <div class="icon-circle">
+                  <i class="bi bi-shield-check text-white fs-2"></i>
+                </div>
+                <h5 class="card-title">Secure & Reliable</h5>
+                <p class="card-text text-muted">
+                  Built with security best practices and reliable infrastructure.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card feature-card h-100 text-center p-4">
+              <div class="card-body">
+                <div class="icon-circle">
+                  <i class="bi bi-palette text-white fs-2"></i>
+                </div>
+                <h5 class="card-title">Beautiful Design</h5>
+                <p class="card-text text-muted">
+                  Modern, clean designs that engage users and drive conversions.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card feature-card h-100 text-center p-4">
+              <div class="card-body">
+                <div class="icon-circle">
+                  <i class="bi bi-tools text-white fs-2"></i>
+                </div>
+                <h5 class="card-title">Easy to Customize</h5>
+                <p class="card-text text-muted">
+                  Flexible components that adapt to your brand and requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="card feature-card h-100 text-center p-4">
+              <div class="card-body">
+                <div class="icon-circle">
+                  <i class="bi bi-headset text-white fs-2"></i>
+                </div>
+                <h5 class="card-title">24/7 Support</h5>
+                <p class="card-text text-muted">
+                  Round-the-clock support to help you succeed with your project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5 text-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="h2 fw-bold">10,000+</div>
+            <p class="mb-0">Happy Clients</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="h2 fw-bold">500+</div>
+            <p class="mb-0">Projects Completed</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="h2 fw-bold">50+</div>
+            <p class="mb-0">Team Members</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="h2 fw-bold">24/7</div>
+            <p class="mb-0">Support Available</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="display-5 fw-bold mb-4">Ready to Get Started?</h2>
+            <p class="lead mb-4">
+              Join thousands of satisfied customers who trust us with their web presence.
+            </p>
+            <button class="btn btn-light btn-lg px-5">
+              <i class="bi bi-arrow-right-circle me-2"></i>
+              Start Your Project Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="fw-bold mb-3">
+              <i class="bi bi-lightning-charge-fill text-warning"></i>
+             Keshavsoft
+            </h5>
+            <p class="text-muted">
+              Creating beautiful, responsive websites with Bootstrap 5. 
+              Your success is our mission.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+              <li><a href="about.html" class="text-muted text-decoration-none">About</a></li>
+              <li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
+              <li><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="fw-bold mb-3">Services</h6>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-muted text-decoration-none">Web Design</a></li>
+              <li><a href="#" class="text-muted text-decoration-none">Development</a></li>
+              <li><a href="#" class="text-muted text-decoration-none">SEO</a></li>
+              <li><a href="#" class="text-muted text-decoration-none">Consulting</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 mb-4">
+            <h6 class="fw-bold mb-3">Newsletter</h6>
+            <p class="text-muted">Stay updated with our latest news and offers.</p>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="my-4">
+        
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-muted mb-0">© 2024 ModernSite. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-muted text-decoration-none">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
